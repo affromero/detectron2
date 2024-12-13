@@ -1,14 +1,2 @@
 [build-system]
-build-backend = "poetry.core.masonry.api"
-requires = ["poetry-core"]
-
-[tool.poetry.dependencies]
-torch = [
-  {markers = "sys_platform != 'linux'", source = "PyPI", version = "2.4.1"},
-  {markers = "sys_platform == 'linux'", source = "Pytorch_Cuda", version = "2.4.1"}
-]
-
-[[tool.poetry.source]]
-name = "Pytorch_Cuda"
-priority = "explicit"
-url = "https://download.pytorch.org/whl/cu121"
+requires = ["setuptools", "torch"]
